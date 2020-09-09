@@ -1,11 +1,11 @@
-var fs = require('fs')
-var path = require('path')
+const fs = require('fs')
+const path = require('path')
 
 module.exports = function(dir, fileFilter, callback){
     fs.readdir(dir, function(err, list){
         if (err) 
             return callback(err);
-        var filteredList = [];
+        let filteredList = [];
         let ext = '.' + fileFilter;
         
         list.forEach(function (file) {
