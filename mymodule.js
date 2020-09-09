@@ -1,5 +1,5 @@
 const fs = require('fs')
-const path = require('path')
+var path = require('path')
 
 module.exports = function(dir, fileFilter, callback){
     fs.readdir(dir, function(err, list){

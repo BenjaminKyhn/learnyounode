@@ -6,7 +6,7 @@ let ext = process.argv[3];
 mymodule(dir, ext, function(err, list){
     if (err) 
         return console.error(err);
-    list.forEach(function (file) {
-        console.log(file);
-    });
+        for (let index = 0; index < list.length; index++) {
+            console.log(list[index]);
+        }
 });
